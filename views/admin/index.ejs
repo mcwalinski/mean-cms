@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<html ng-app="notesApp"><html>
+    <% include partials/nav.ejs %>
+  <body>
+
+<div class="container-fluid" id="main">
+    <div class="row row-offcanvas row-offcanvas-left">
+        <% include partials/sidebar.ejs %>
+
+        <div class="col-md-9 col-lg-10 main">
+
+            <!--toggle sidebar button-->
+            <p class="hidden-md-up">
+                <button type="button" class="btn btn-primary-outline btn-sm" data-toggle="offcanvas"><i class="fa fa-chevron-left"></i> Menu</button>
+            </p>
+
+            <h1 class="display-1 hidden-xs-down">
+            Newsroom Internship Dashboard
+            </h1>
+            <p class="lead">Review Internship applications and mark them appropriately.</p>
+
+            <div class="alert alert-warning fade collapse" role="alert" id="myAlert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <strong>September 24th</strong> Is the approval deadline.
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="card card-inverse card-info">
+                        <div class="card-block bg-info">
+                            <div class="rotate">
+                                <i class="fa fa-user fa-5x"></i>
+                            </div>
+                            <h6 class="text-uppercase">Applications</h6>
+                            <h1 class="display-1">134</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card card-inverse card-warning">
+                        <div class="card-block bg-warning">
+                            <div class="rotate">
+                                <i class="fa fa-list fa-4x"></i>
+                            </div>
+                            <h6 class="text-uppercase">Drafts</h6>
+                            <h1 class="display-1">87</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card card-inverse card-success">
+                        <div class="card-block bg-sucess">
+                            <div class="rotate">
+                                <i class="fa fa-user fa-5x"></i>
+                            </div>
+                            <h6 class="text-uppercase">Approved</h6>
+                            <h1 class="display-1">125</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card card-inverse card-danger">
+                        <div class="card-block bg-danger">
+                            <div class="rotate">
+                                <i class="fa fa-list fa-5x"></i>
+                            </div>
+                            <h6 class="text-uppercase">Rejected</h6>
+                            <h1 class="display-1">36</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/row-->
+
+            <hr>
+
+            <h2 class="sub-header">Recent Applicants</h2>
+            <div class="row">
+                <div class="col-lg-12 col-md-11">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead class="thead-inverse">
+                                <tr>
+                                    <th>Applicant #</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>First Choice</th>
+                                    <th>Second Choice</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1,001</td>
+                                    <td><a href="#">Matthew Cwalinski </a></td>
+                                    <td>matthew.cwalinski@washpost.com</td>
+                                    <td>Reporter: Features</td>
+                                    <td>Video Producer</td>
+                                </tr>
+                                <tr>
+                                    <td>1,002</td>
+                                    <td><a href="#">Matthew Cwalinski </a></td>
+                                    <td>matthew.cwalinski@washpost.com</td>
+                                    <td>Reporter: Features</td>
+                                    <td>Video Producer</td>
+                                </tr>
+                                <tr>
+                                    <td>1,003</td>
+                                    <td><a href="#">Matthew Cwalinski </a></td>
+                                    <td>matthew.cwalinski@washpost.com</td>
+                                    <td>Reporter: Features</td>
+                                    <td>Video Producer</td>
+                                </tr>
+                                <tr>
+                                    <td>1,003</td>
+                                    <td><a href="#">Matthew Cwalinski </a></td>
+                                    <td>matthew.cwalinski@washpost.com</td>
+                                    <td>Reporter: Features</td>
+                                    <td>Video Producer</td>
+                                </tr>
+                                <tr>
+                                    <td>1,004</td>
+                                    <td><a href="#">Matthew Cwalinski </a></td>
+                                    <td>matthew.cwalinski@washpost.com</td>
+                                    <td>Reporter: Features</td>
+                                    <td>Video Producer</td>
+                                </tr>
+                                <tr>
+                                    <td>1,005</td>
+                                    <td><a href="#">Matthew Cwalinski </a></td>
+                                    <td>matthew.cwalinski@washpost.com</td>
+                                    <td>Reporter: Features</td>
+                                    <td>Video Producer</td>
+                                </tr>
+                                <tr>
+                                    <td>1,006</td>
+                                    <td><a href="#">Matthew Cwalinski </a></td>
+                                    <td>matthew.cwalinski@washpost.com</td>
+                                    <td>Reporter: Features</td>
+                                    <td>Video Producer</td>
+                                </tr>
+                                <tr>
+                                    <td>1,007</td>
+                                    <td><a href="#">Matthew Cwalinski </a></td>
+                                    <td>matthew.cwalinski@washpost.com</td>
+                                    <td>Reporter: Features</td>
+                                    <td>Video Producer</td>
+                                </tr>
+                                <tr>
+                                    <td>1,008</td>
+                                    <td><a href="#">Matthew Cwalinski </a></td>
+                                    <td>matthew.cwalinski@washpost.com</td>
+                                    <td>Reporter: Features</td>
+                                    <td>Video Producer</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!--/row-->
+
+            
+            <hr>
+            <h2 class="sub-header">Most popular area of interest</h2>
+            <hr>
+            <div class="row placeholders">
+                <div class="col-xs-6 col-sm-3 placeholder text-center">
+                    <h4>Reporter: Local</h4>
+                    <img src="//placehold.it/200/dddddd/fff?text=1" class="center-block img-responsive img-circle" alt="Generic placeholder thumbnail">
+                </div>
+                <div class="col-xs-6 col-sm-3 placeholder text-center">
+                    <h4>Copy Editor</h4>
+                    <img src="//placehold.it/200/e4e4e4/fff?text=2" class="center-block img-responsive img-circle" alt="Generic placeholder thumbnail">
+                </div>
+                <div class="col-xs-6 col-sm-3 placeholder text-center">
+                    <h4>Multi Media Producer</h4>
+                    <img src="//placehold.it/200/d6d6d6/fff?text=3" class="center-block img-responsive img-circle" alt="Generic placeholder thumbnail">
+                </div>
+                <div class="col-xs-6 col-sm-3 placeholder text-center">
+                    <h4>Reporter Features</h4>
+                    <img src="//placehold.it/200/e0e0e0/fff?text=4" class="center-block img-responsive img-circle" alt="Generic placeholder thumbnail">
+                </div>
+            </div>
+            <!-- <h2 class="sub-header">Interesting layouts and elements</h2>
+            <div class="row">
+                
+                <div class="col-lg-6"> -->
+                    <!-- Nav tabs -->
+                    <!-- <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#home1" role="tab" data-toggle="tab">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#profile1" role="tab" data-toggle="tab">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#messages1" role="tab" data-toggle="tab">Messages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#settings1" role="tab" data-toggle="tab">Settings</a>
+                        </li>
+                    </ul> -->
+
+                    <!-- Tab panes -->
+                    <!-- <div class="tab-content">
+                        <br>
+                        <div role="tabpanel" class="tab-pane active" id="home1">
+                            <h4>Home</h4>
+                            <p>
+                                1. These Bootstrap 4 Tabs work basically the same as the Bootstrap 3.x tabs.
+                                <br>
+                                <br>
+                                <button class="btn btn-primary-outline btn-lg">Wow</button>
+                            </p>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="profile1">
+                            <h4>Pro</h4>
+                            <p>
+                                2. Tabs are helpful to hide or collapse some addtional content.
+                            </p>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="messages1">
+                            <h4>Messages</h4>
+                            <p>
+                                3. You can really put whatever you want into the tab pane.
+                            </p>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="settings1">
+                            <h4>Settings</h4>
+                            <p>
+                                4. Some of the Bootstrap 3.x components like well and panel have been dropped for the new card component.
+                            </p>
+                        </div>
+                    </div> -->
+                <!-- </div> -->
+               <!--  <div class="clearfix"></div>
+                <div class="col-lg-6">
+                    <div class="card card-default card-block">
+                        <ul id="tabsJustified" class="nav nav-tabs nav-justified">
+                            <li class="nav-item">
+                                <a class="nav-link" href="" data-target="#tab1" data-toggle="tab">List</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="" data-target="#tab2" data-toggle="tab">Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="" data-target="#tab3" data-toggle="tab">More</a>
+                            </li>
+                        </ul> -->
+                        <!--/tabs-->
+                   <!--      <br> -->
+                        <!-- <div id="tabsJustifiedContent" class="tab-content">
+                            <div class="tab-pane fade" id="tab1">
+                                <div class="list-group">
+                                    <a href="" class="list-group-item"><span class="pull-right label label-success">51</span> Home Link</a>
+                                    <a href="" class="list-group-item"><span class="pull-right label label-success">8</span> Link 2</a>
+                                    <a href="" class="list-group-item"><span class="pull-right label label-success">23</span> Link 3</a>
+                                    <a href="" class="list-group-item text-muted">Link n..</a>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade active in" id="tab2">
+                                <div class="row">
+                                    <div class="col-sm-7">
+                                        <h4>Profile Section</h4>
+                                        <p>Imagine creating this simple user profile inside a tab card.</p>
+                                    </div>
+                                    <div class="col-sm-5"><img src="//placehold.it/170" class="pull-right img-responsive img-rounded"></div>
+                                </div>
+                                <hr>
+                                <a href="javascript:;" class="btn btn-info btn-block">Read More Profiles</a>
+                                <div class="spacer5"></div>
+                            </div>
+                            <div class="tab-pane fade" id="tab3">
+                                <div class="list-group">
+                                    <a href="" class="list-group-item"><span class="pull-right label label-info label-pill">44</span> <code>.panel</code> is now <code>.card</code></a>
+                                    <a href="" class="list-group-item"><span class="pull-right label label-info label-pill">8</span> <code>.nav-justified</code> is deprecated</a>
+                                    <a href="" class="list-group-item"><span class="pull-right label label-info label-pill">23</span> <code>.badge</code> is now <code>.label-pill</code></a>
+                                    <a href="" class="list-group-item text-muted">Message n..</a>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!--/tabs content-->
+                     <!-- </div> -->
+                 <!-- </div> -->
+                <!-- <div class="col-lg-6">
+                    <div id="accordion" role="tablist" aria-multiselectable="true">
+                      <div class="card">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              Collapsible Group Item #1
+                            </a>
+                        </div>
+                        <div id="collapseOne" class="card-block collapse in" role="tabpanel" aria-labelledby="headingOne">
+                             <p>This is a Bootstrap 4 accordion that uses the <code>.card</code> classes instead of <code>.panel</code>. The single-open section aspect is not working because the parent option (dependent on .panel) has not yet been finalized in BS 4 alpha. </p>
+                        </div>
+                        <div class="card-header" role="tab" id="headingTwo">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              Collapsible Group Item #2
+                            </a>
+                        </div>
+                        <div id="collapseTwo" class="card-block collapse" role="tabpanel" aria-labelledby="headingTwo">
+                             <p>Just like it's predecesor, Bootstrap 4 is mobile-first so that you start by designing for smaller devices such as smartphones and tablets, then proceed to laptop and desktop layouts.</p>
+                        </div>
+                        <div class="card-header" role="tab" id="headingThree">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              Collapsible Group Item #3
+                            </a>
+                        </div>
+                        <div id="collapseThree" class="card-block collapse" role="tabpanel" aria-labelledby="headingThree">
+                             <p>Bootstrap employs a handful of important global styles and settings that you’ll need to be aware of when using it, all of which are almost exclusively geared towards the normalization of cross browser styles.</p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>-->
+
+        <!-- </div> -->
+        <!--/main col-->
+    </div>
+
+</div>
+<!--/.container-->
+<footer class="container-fluid">
+    <p class="text-right small">©2015 Company</p>
+</footer>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Help</h4>
+            </div>
+            <div class="modal-body">
+                This is where we can put help information and contact info for editors.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary-outline" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <!--scripts loaded here-->
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
+    
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
