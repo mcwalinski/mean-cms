@@ -1,11 +1,7 @@
  // app/application.js
 
     // grab the needed models
-    var application = require('./models/application');,
-    var skills = require('./models/skills');
-    var about = require('./models/about');
-    var work = require('./models/work');
-    var experience = require('./models/experience');
+    var application = require('./models/application');
 
     module.exports = function(app) {
 

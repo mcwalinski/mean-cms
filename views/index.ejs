@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="userApp">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,11 +20,11 @@
   <% include partials/fonts.ejs %>
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-controller="userCtrl">
   <!-- Navigation -->
   <% include partials/nav.ejs %>
 
-    <% include partials/header.ejs %> 
+    <% include partials/header.ejs %>
 
     <!-- Skills Section -->
     <% include partials/skills.ejs %> 

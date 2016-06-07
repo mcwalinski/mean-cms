@@ -33,16 +33,16 @@
 
         // Server routes.  Handles api calls, authentication etc
 
-        // get all api call
-        api.get('/notes', function(req, res) {
-            // use mongoose to get all notes in the database
+        // get skills api call
+        api.get('/skills', function(req, res) {
+            // use mongoose to get all skills in the database
             console.log('test api server call');
-            UserNotes.find(function(err, notes) {
+            skills.find(function(err, skills) {
                 // if there is an error retrieving, send the error. 
                 // nothing after res.send(err) will execute
                 if (err)
                     res.send(err);
-                res.json({ all : notes }); // return all notes in JSON format
+                res.json({ all : skills }); // return all skills in JSON format
             });
         });
 

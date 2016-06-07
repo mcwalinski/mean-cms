@@ -7,7 +7,6 @@
     var work = require('./models/work');
     var experience = require('./models/experience');
 
-
     module.exports = function(admin) {
 
         // Frontend routes 
