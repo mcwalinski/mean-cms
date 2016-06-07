@@ -42,7 +42,7 @@
                 // nothing after res.send(err) will execute
                 if (err)
                     res.send(err);
-                res.json({ all : skills }); // return all skills in JSON format
+                res.json({ skill : skills }); // return all skills in JSON format
             });
         });
 
