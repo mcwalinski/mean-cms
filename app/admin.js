@@ -1,7 +1,8 @@
- // app/routes.js
+ // app/admin.js
 
-// grab the notes model
-var UserNotes = require('./models/admin');
+    // grab the needed models
+    var admin = require('./models/admin');
+    var skills = require('./models/skills');
 
 
     module.exports = function(admin) {
