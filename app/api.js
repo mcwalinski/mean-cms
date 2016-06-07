@@ -1,8 +1,10 @@
  // app/routes.js
 
 // grab the notes model
-var UserNotes = require('./models/notes');
-
+    var skills = require('./models/skills');
+    var about = require('./models/about');
+    var work = require('./models/work');
+    var experience = require('./models/experience');
 
     module.exports = function(api) {
 

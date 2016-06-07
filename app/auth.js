@@ -1,7 +1,7 @@
  // app/routes.js
 
-// grab the notes model
-var UserNotes = require('./models/auth');
+    // grab the notes model
+    var user = require('./models/auth');
 
 
     module.exports = function(auth) {
