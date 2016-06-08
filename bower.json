@@ -17,5 +17,8 @@
     "font-awesome": "~4.1.0",
     "angular-filter": "~0.5.4",
     "ng-resource": "~0.0.2"
+  },
+  "resolutions": {
+    "angular": "1.4.7"
   }
 }

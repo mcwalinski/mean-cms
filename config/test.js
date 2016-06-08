@@ -1,0 +1,1 @@
+// config/db.js  This is where you would put in your mongodb connection information
