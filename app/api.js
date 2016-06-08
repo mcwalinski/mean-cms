@@ -18,36 +18,58 @@
             next(); 
         });
 
-        // route middleware to validate :name
-        // auth.param('name', function(req, res, next, name) {
-        //     // do validation on name here
-        //     // blah blah validation
-        //     // log something so we know its working
-        //     console.log('doing name validations on ' + name);
-
-        //     // once validation is done save the new item in the req
-        //     req.name = name;
-        //     // go to the next thing
-        //     next(); 
-        // });
-
-        // Server routes.  Handles api calls, authentication etc
-
         // get skills api call
         api.get('/skills', function(req, res) {
             // use mongoose to get all skills in the database
-            console.log('test api server call');
             skills.find(function(err, skills) {
+                console.log(skills);
                 // if there is an error retrieving, send the error. 
                 // nothing after res.send(err) will execute
                 if (err)
                     res.send(err);
-                res.json({ skill : skills }); // return all skills in JSON format
+                res.json({ data : skills }); // return all skills in JSON format
             });
         });
 
-        // get single note api call
-        api.get('/notes/single/:_id', function(req, res) {
+        // get work api call
+        api.get('/work', function(req, res) {
+            // use mongoose to get all skills in the database
+            work.find(function(err, work) {
+                console.log(work);
+                // if there is an error retrieving, send the error. 
+                // nothing after res.send(err) will execute
+                if (err)
+                    res.send(err);
+                res.json({ data : work }); // return all skills in JSON format
+            });
+        });
+
+        // get experience api call
+        api.get('/experience', function(req, res) {
+            // use mongoose to get all experience docs in the database
+            experience.find(function(err, experience) {
+                // if there is an error retrieving, send the error. 
+                // nothing after res.send(err) will execute
+                if (err)
+                    res.send(err);
+                res.json({ data : experience }); // return all skills in JSON format
+            });
+        });
+
+        // get about api call
+        api.get('/about', function(req, res) {
+            // use mongoose to get all about docs in the database
+            about.find(function(err, about) {
+                // if there is an error retrieving, send the error. 
+                // nothing after res.send(err) will execute
+                if (err)
+                    res.send(err);
+                res.json({ data : about }); // return all skills in JSON format
+            });
+        });
+
+        // get single skill api call
+        api.get('/skills/single/:_id', function(req, res) {
             // use mongoose to get all nerds in the database
             UserNotes.findOne({
                 _id: req.params._id
@@ -59,28 +81,28 @@
         });
 
         // route to handle creating (app.post)
-        api.post('/addNote', function(req, res) { 
-            var newNote = new UserNotes(req.body);      // create a new instance of the notes model
+        api.post('/addSkill', function(req, res) { 
+            var newSkill = new skills(req.body);      // create a new instance of the skills model
             console.log(req.body);
-            newNote.title = req.body.title;  // set the notes info (comes from the request)
+            newSkill.title = req.body.title;  // set the skill info (comes from the request)
             console.log(req.body.title);
-            newNote.save(function(err, note) {
+            newSkill.save(function(err, skill) {
                 if (err)
                 res.send(err);
             console.log(err);
-                res.json({ message: 'Note Added!' + note });
+                res.json({ message: 'Skill Added!' + skill });
             });
         });
         
         // route to handle delete goes here based on object _id (app.delete)
-        api.delete('/removeNote/:_id', function(req, res) { 
+        api.delete('/removeSkill/:_id', function(req, res) { 
             
-        UserNotes.remove({
+        newSkill.remove({
             _id: req.params._id,
-            }, function(err, note) {
+            }, function(err, skill) {
                 if (err)
                     res.send(err);
-                res.json({ message: 'Successfully removed note'});
+                res.json({ message: 'Successfully removed skill'});
             });
         });
 

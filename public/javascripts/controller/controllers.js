@@ -5,11 +5,15 @@ var userApplication = angular.module('userApp', ['angular.filter', 'notesFilter'
 
 userApplication.controller('userCtrl', ['$scope', '$http', 'apiService',
   function ($scope, $http, apiService) {
-	  
-  apiService.query({}, function(data) {
-	$scope.post = data.skill;
-  });
-	
-	window.console.log($scope.post);
+
+     apiService.getSkills.then(function(data){
+          $scope.skills = data;
+          window.console.log($scope.skills);
+     });
+
+     apiService.getWork.then(function(data){
+          $scope.work = data;
+          window.console.log($scope.work);
+     });
 
 }]);

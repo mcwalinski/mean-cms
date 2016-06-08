@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 
 // define our model
 // module.exports allows us to pass this to other files when it is called.  This happens in routes.js
-module.exports = mongoose.model('experience', new mongoose.Schema({
+module.exports = mongoose.model('experiences', new mongoose.Schema({
     company : {type : String, default: '', required : false },
     title : {type : String, default: '', required : false },
     summary  : {type : String, default: '', required : false },
