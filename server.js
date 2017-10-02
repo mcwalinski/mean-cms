@@ -14,7 +14,7 @@ var mongoose   	   = require('mongoose');
 // configuration ===========================================
     
 // MongoDB config file - This stores the DB connection info
-var db = require('./config/db');
+//var db = require('./config/db');
 
 // Invoke Express Router
 var router = express.Router();
@@ -24,7 +24,7 @@ var port = process.env.PORT || 3000;
 
 // connect to our mongoDB database 
 // uncomment after you enter in your own credentials in config/db.js
-mongoose.connect(db.url); 
+//mongoose.connect(db.url); 
 
 // get all data/stuff of the body (POST) parameters
 // parse application/json 
